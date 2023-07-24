@@ -17,9 +17,15 @@
     "build": "vite build",
     "build:types": "tsc --noEmit --incremental false --pretty",
     "prettier": "prettier --write --config ./.prettierrc \"**/*.{js,ts,tsx}\"",
-    "conventions": "pnpm prettier && eslint --fix \"**/*.{js,ts,tsx}\""
+    "conventions": "pnpm prettier && eslint --fix \"**/*.{js,ts,tsx}\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "^7.1.0",
+    "@storybook/addon-essentials": "^7.1.0",
+    "@storybook/react": "^7.1.0",
+    "@storybook/react-vite": "^7.1.0",
     "@types/node": "^20.4.4",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
@@ -40,6 +46,7 @@
     "prettier": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "storybook": "^7.1.0",
     "typescript": "^5.1.6",
     "vite": "^4.4.6",
     "vite-plugin-dts": "^3.3.1"
