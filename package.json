@@ -19,7 +19,8 @@
     "prettier": "prettier --write --config ./.prettierrc \"**/*.{js,ts,tsx}\"",
     "conventions": "pnpm prettier && eslint --fix \"**/*.{js,ts,tsx}\"",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_8e4fe5c0112c6fc"
   },
   "devDependencies": {
     "@cocstorage/ui": "^0.1.58",
