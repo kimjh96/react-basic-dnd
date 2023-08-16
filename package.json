@@ -1,8 +1,10 @@
 {
   "name": "react-basic-dnd",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "React Basic DnD",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
   "keywords": [
     "react",
     "react dnd",

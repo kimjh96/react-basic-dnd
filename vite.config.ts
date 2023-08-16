@@ -1,4 +1,4 @@
-import path from 'path';
+import * as path from 'path';
 
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
@@ -9,16 +9,17 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       name: 'react-basic-dnd',
-      formats: ['cjs', 'es'],
-      fileName: (fileName) => (fileName === 'cjs' ? 'index.js' : 'index.es.js')
+      formats: ['es'],
+      fileName: 'index'
     },
     rollupOptions: {
+      external: ['react'],
       output: {
         interop: 'auto'
       }
     }
   },
-  plugins: [react(), dts()],
+  plugins: [react(), dts({ insertTypesEntry: true })],
   resolve: {
     alias: [
       { find: '@', replacement: path.resolve(__dirname, 'src') },
