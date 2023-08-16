@@ -22,7 +22,7 @@ function DraggableContainer<T>({
   value,
   ...props
 }: PropsWithChildren<DraggableContainerProps<T>>) {
-  const [localValue, setLocalValue] = useState(value);
+  const [localValue, setLocalValue] = useState(value || []);
 
   const draggingRef = useRef(false);
   const startClientXRef = useRef(0);
@@ -136,7 +136,7 @@ function DraggableContainer<T>({
 
     if (!offsetParent) return;
 
-    const newValue = [...value];
+    const newValue = [...(value || [])];
     const dropValue = newValue[currentIndex];
 
     newValue.splice(currentIndex, 1);
