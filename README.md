@@ -26,7 +26,7 @@ import { DraggableContainer, DraggableItem } from 'react-basic-dnd';
 function App() {
   const [value, setValue] = useState([1, 2]);
   
-  const handleChange = () => (newValue) => setValue(newValue);
+  const handleChange = (newValue) => setValue(newValue);
   
   return (
     <DraggableContainer onChange={handleChange} value={value}>
