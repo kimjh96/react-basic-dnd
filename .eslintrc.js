@@ -1,6 +1,5 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['import', 'prettier', '@typescript-eslint'],
   extends: [
     'airbnb',
     'airbnb/hooks',

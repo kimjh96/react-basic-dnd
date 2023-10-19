@@ -1,4 +1,4 @@
 module.exports = {
-  '*.{js,jsx,ts,tsx}': 'pnpm conventions',
-  '**/*.ts?(x)': 'pnpm build:types'
+  '*.{js,ts,tsx,json}': 'prettier --write --config ./.prettierrc',
+  '*.{js,ts,tsx}': 'eslint --fix'
 };
